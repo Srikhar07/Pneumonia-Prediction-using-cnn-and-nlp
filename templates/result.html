@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Medical Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+
+<body>
+
+<h1>Your Report</h1>
+<hr>
+
+<div class='container'>
+    <div class='card'>
+        {% if image_conf %}
+
+            <p><strong>Name:</strong> {{name}}</p>
+            <p><strong>Age:</strong> {{age}}</p>
+            <p><strong>Phone number:</strong> {{phone_number}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Symptoms:</strong> {{symptoms}}</p>
+
+            <img src="{{ url_for('static', filename=image_path) }}">
+
+            <hr>
+
+            <!-- FINAL RESULT -->
+            <h2 style="text-align:center; margin-top:10px;">
+                Final Prediction: {{ final_prediction }}
+            </h2>
+
+            <hr>
+
+            <p><strong>Image Model Confidence:</strong> {{image_conf}}%</p>
+            <p><strong>Symptom Model Confidence:</strong> {{symptom_conf}}%</p>
+            <p><strong>Final Combined Confidence:</strong> {{final_conf}}%</p>
+
+        {% endif %}
+    </div>
+</div>
+
+<h4>To Know more about Pneumonia
+    <a href="https://my.clevelandclinic.org/health/diseases/4471-pneumonia">Press here</a>
+</h4>
+<hr>
+<footer>Made with Love from India ❤️</footer>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Medical Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+
+<body>
+
+<div class='info'>
+        <h1>AI Medical Assistant</h1>
+        <hr>
+    <div class='warning'>
+        <p>Please give the data carefully.</p>
+        <p>Wrong information given can cause unnecessary headache to you!</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <form action="/predict" method="POST" enctype="multipart/form-data">
+        <label>Username:</label>
+        <input type="text" name="user_name" required><br>
+
+        <label>Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label>Phone number:</label>
+        <input type="number" name="phone" required><br>
+
+        <label>Email:</label>
+        <input type="text" name="email" placeholder='optional'><br>
+
+        <label>Image:</label>
+        <input type="file" name="image" accept="image/*" required><br>
+
+        <label>Infection symptoms:</label>
+        <input type="text" name="symptoms" required placeholder='write your symptoms'><br>
+
+        <button type="submit">Predict</button>
+        </form>
+    </div>
+</div>
+
+<h4>To Know more about Pneumonia
+    <a href="https://my.clevelandclinic.org/health/diseases/4471-pneumonia">Press here</a>
+</h4>
+<hr>
+<footer>Made with Love from India ❤️</footer>
+
+</body>
+</html>
