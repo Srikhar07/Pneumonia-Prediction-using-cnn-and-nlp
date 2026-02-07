@@ -97,9 +97,9 @@ def prediction():
             email=email,
             symptoms=symptoms,
             image_path='uploads/' + img_file.filename,
-            image_conf=round(image_score * 100, 2),
-            symptom_conf=round(symptom_score * 100, 2),
-            final_conf=round(final_score * 100, 2),
+            image_conf=image_score * 100,
+            symptom_conf=symptom_score * 100,
+            final_conf=final_score * 100,
             final_prediction=final_prediction
         )
 
@@ -111,3 +111,4 @@ def prediction():
 # ---------------- RUN SERVER ----------------
 if __name__ == '__main__':
     app.run(port=8080, debug=True)
+
