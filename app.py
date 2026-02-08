@@ -82,7 +82,7 @@ def prediction():
         symptom_score = predict_symptoms(symptoms)
 
         # -------- FINAL COMBINED CONFIDENCE --------
-        final_score = (0.5 * image_score) + (0.5 * symptom_score)
+        final_score = (image_score + symptom_score) / 2
         # -------- FINAL PREDICTION LABEL --------
         if final_score >= 0.5:
             final_prediction = "PNEUMONIA DETECTED"
@@ -111,4 +111,5 @@ def prediction():
 # ---------------- RUN SERVER ----------------
 if __name__ == '__main__':
     app.run(port=8080, debug=True)
+
 
