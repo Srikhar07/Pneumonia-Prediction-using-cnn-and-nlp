@@ -1,6 +1,6 @@
 # Pneumonia Prediction using CNN and NLP (Multi-Modal Medical Assistant)
 
-## Visit: https://pneumonia-prediction-qmob.onrender.com
+## Visit: 
 
 ## 📌 Project Overview
 
