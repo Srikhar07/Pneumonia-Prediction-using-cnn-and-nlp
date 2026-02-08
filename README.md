@@ -29,7 +29,7 @@ This project uses a **multi-modal approach**:
 * Final Decision → Combines both predictions
 
 ```
-Final Score = 0.5 × Image Confidence + 0.5 × Symptom Confidence
+Final Score = (Image Confidence + Symptom Confidence) / 2
 ```
 
 ---
